@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+<title>JSF RSBK</title>
+<title>JSF RSBK Kel 22</title>
+<meta charset="utf-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"></link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</h:head>
+  <h:body>
+        <div class="container">
+            <div class="row" style="padding: 3%; border-bottom: 1px solid #f2f2f2;">
+                <div class="col-12">
+                    <h3 align="center">Kelompok 22</h3>
+                </div>
+                <div class="col-12">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                          <a class="nav-link" href="index.xhtml">Pesilat</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="kelas.xhtml">Kelas</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="join.xhtml">Join</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h:form>
+            <div class="row" style="margin-top: 3%;">
+                <div class="col-4 offset-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Edit Data Kelas</h2>
+                            <hr></hr>
+                            <table class="table table-striped">
+                                <tr>
+                                   <td>ID_KELAS </td>
+                                   <td><h:inputText value="#{Editkelas.id_kelas}" class="form-control form-control-sm" required="true" requiredMessage="id ne kosong bro"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                   <td>NAMA KELAS </td>
+                                   <td><h:inputText value="#{Editkelas.nama_kelas}" class="form-control form-control-sm" required="true" requiredMessage="nama ne kosong bro"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                   <td>KETERANGAN </td>
+                                   <td>
+                                       <h:inputText value="#{Editkelas.keterangan}" class="form-control form-control-sm" required="true" requiredMessage="ket ne kosong bro"></h:inputText>
+                                   </td>
+                                </tr>
+                            </table>
+                            <div class="row">
+                                <div class="col-12 text-right">
+                                    <h:commandButton value="Update" action="#{Editkelas.Update_kelas}" class="btn btn-warning">
+                                        <f:param name="Update_id_kelas" value="#{Editkelas.id_kelas}" />
+                                    </h:commandButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </h:form>
+        </div>
+</h:body>
+</html>
